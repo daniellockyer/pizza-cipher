@@ -11,7 +11,7 @@ public class PizzaSolver {
 	public String alphabetGuess = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!,?";
 
 	public PizzaSolver() throws IOException {
-		BufferedImage image = ImageIO.read(new File("saved.png"));
+		BufferedImage image = ImageIO.read(new File("jet.jpg"));
 		int[] numbers = new int[image.getWidth()];
 
 		for (int i = 0; i < image.getWidth(); i++) {
@@ -33,11 +33,7 @@ public class PizzaSolver {
 		}
 	}
 
-	public static void main(String[] args) {
-		try {
-			new PizzaSolver();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	public static void main(String[] args) throws IOException {
+	    new PizzaSolver();
 	}
 }
